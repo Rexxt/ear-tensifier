@@ -4,6 +4,6 @@ module.exports = {
     cooldown: '3',
     aliases: [`developer`],
 	async execute(client, message, args){
-        message.channel.send(`Ear Tesnifier is developed by \`Tetra#0002\``)
+        message.channel.send(`Ear Tensifier is developed by \`Tetra#0002\``)
 	},
 };
