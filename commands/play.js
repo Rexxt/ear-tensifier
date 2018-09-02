@@ -48,10 +48,11 @@ module.exports = {
                     var videos = await youtube.searchVideos(searchString, 5);
                     let index = 0;
 					let selectionEmbed = new Discord.RichEmbed()
-					.setAuthor(`Song Selection - Type the value of a song to select a result.`, settings.icon)
+					.setAuthor(`Search Results - Type the value of a song to select a result.`, settings.icon)
 					.setColor(colors.discord)
                     .setDescription(`${videos.map(video2 => `**${++index} -** ${`${video2.title} | [Link](${video2.url})`}`).join('\n')}`)
 					.setFooter(`Command cancels in 30 seconds.`);
+					.setThumbnail(`https://retardedmemes.did-i.win/i/0u0b.png`)
 					searchResults.edit(selectionEmbed);
 					try {
 						var response = await message.channel.awaitMessages(message2 => message2.content > 0 && message2.content < 11, {
